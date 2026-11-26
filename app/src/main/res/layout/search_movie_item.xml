@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_white">
+
+
+            <ImageView
+                android:id="@+id/ivSearchPage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_local_movies_24" />
+
+            <TextView
+                android:id="@+id/tvSMovieTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textAppearance="@style/YSMedium19Bold"
+                app:layout_constraintBottom_toTopOf="@id/tvSOriginalTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivSearchPage"
+                app:layout_constraintTop_toTopOf="@id/ivSearchPage"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Аватар" />
+
+            <TextView
+                android:id="@+id/tvSOriginalTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="12dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textAppearance="@style/YSRegular13_400"
+                app:layout_constraintBottom_toTopOf="@id/tvSMovieRelease"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivSearchPage"
+                app:layout_constraintTop_toBottomOf="@+id/tvSMovieTitle"
+                tools:text="Avatar FULL HD" />
+
+            <TextView
+                android:id="@+id/tvSMovieRelease"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textAppearance="@style/YSRegular13_400"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSearchPage"
+                app:layout_constraintEnd_toStartOf="@+id/tvSMovieRating"
+                app:layout_constraintStart_toEndOf="@+id/ivSearchPage"
+                app:layout_constraintTop_toBottomOf="@+id/tvSOriginalTitle"
+                tools:text="2018" />
+
+            <TextView
+                android:id="@+id/tvSMovieRating"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/grade_perfect_background"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:textAppearance="@style/YSMedium19Bold"
+                android:textColor="@color/dark_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="8,7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

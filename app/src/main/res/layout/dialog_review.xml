@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="currentReview"
+            type="com.example.mymoviedatabase.domain.entity.Review" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/dialog_background"
+        android:padding="12dp">
+
+
+        <ImageView
+            android:id="@+id/ivDialogUser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            userAvatar="@{currentReview}"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_person_24" />
+
+        <TextView
+            android:id="@+id/tvDialogUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{currentReview.username}"
+            android:textAppearance="@style/YSMedium19Bold"
+            tools:text="Franklin"
+            android:textColor="?attr/colorSecondaryVariant"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDialogUser"
+            app:layout_constraintTop_toTopOf="@+id/ivDialogUser"
+            app:layout_constraintBottom_toTopOf="@id/tvDialogUserRating"/>
+
+        <TextView
+            android:id="@+id/tvDialogUserRating"
+            userRating="@{currentReview}"
+            tools:text="Rating 6"
+            android:textAppearance="@style/YSMedium19Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorSecondaryVariant"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDialogUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDialogUser"
+            app:layout_constraintTop_toBottomOf="@+id/tvDialogUserName" />
+
+        <ScrollView
+            android:id="@+id/svDialog"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivDialogUser">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDialogReviewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{currentReview.content}"
+                    android:textColor="?attr/colorSecondaryVariant"
+                    android:textAppearance="@style/YSRegular13_400"
+                    tools:text="фывфывфыв"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tvDialogReviewRelease"/>
+
+                <TextView
+                    android:id="@+id/tvDialogReviewRelease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    reviewRelease="@{currentReview}"
+                    android:textColor="?attr/colorSecondaryVariant"
+                    android:textAppearance="@style/YSRegular13_400"
+                    tools:text="фывфывфыв"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogExit"
+            style="@style/ErrorButtonStyle"
+            android:layout_width="match_parent"
+            android:text="@string/exit"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/svDialog"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

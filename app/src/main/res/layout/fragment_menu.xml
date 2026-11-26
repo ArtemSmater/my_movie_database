@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:paddingBottom="@dimen/marginAlignXXLarge"
+        tools:context=".presentation.ui.menu.FragmentMenu">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/movie_observer"
+            app:titleTextAppearance="@style/YSMedium22_500"
+            app:titleTextColor="@color/dark_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSearchScreen"
+            style="@style/MainButtonStyle"
+            android:text="@string/search"
+            android:textColor="@color/black_light"
+            app:icon="@drawable/baseline_search_24"
+            app:layout_constraintBottom_toTopOf="@id/btnObserverScreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tbMenu"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/btnObserverScreen"
+            style="@style/MainButtonStyle"
+            android:text="@string/collections"
+            android:textColor="@color/black_light"
+            app:icon="@drawable/baseline_collections_24"
+            app:layout_constraintBottom_toTopOf="@id/btnFavouriteScreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSearchScreen" />
+
+        <Button
+            android:id="@+id/btnFavouriteScreen"
+            style="@style/MainButtonStyle"
+            android:text="@string/favourites"
+            android:textColor="@color/black_light"
+            app:icon="@drawable/baseline_bookmark_added_24"
+            app:layout_constraintBottom_toTopOf="@id/btnSettingsScreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnObserverScreen" />
+
+        <Button
+            android:id="@+id/btnSettingsScreen"
+            style="@style/MainButtonStyle"
+            android:text="@string/settings"
+            android:textColor="@color/black_light"
+            app:icon="@drawable/baseline_settings_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnFavouriteScreen" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

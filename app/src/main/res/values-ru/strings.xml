@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Обозреватель фильмов</string>
+    <string name="settings">Настройки</string>
+    <string name="favourites">Избранное</string>
+    <string name="collections">Категории</string>
+    <string name="search">Поиск</string>
+    <string name="upcoming">Выходят</string>
+    <string name="playing">Идут</string>
+    <string name="top_rated">Рейтинговые</string>
+    <string name="popular">Популярные</string>
+    <string name="last_requests">Крайние запросы</string>
+    <string name="internet_error">Проверьте слединение с интернетом</string>
+    <string name="download_error">Ничего не нашлось</string>
+    <string name="try_again">Перезагрузить</string>
+    <string name="original_title">Оригинальное название</string>
+    <string name="release_date">Дата выхода</string>
+    <string name="rating">Рейтинг</string>
+    <string name="movie_rating">Рейтинг фильма</string>
+    <string name="overview">Описание</string>
+    <string name="reviews">Коментарии</string>
+    <string name="trailers">Обзоры</string>
+    <string name="exit">Назад</string>
+    <string name="movie_observer">Обозреватель фильмов</string>
+    <string name="movie_collections">Категории фильмов</string>
+    <string name="favourite_movies">Избранные фильмы</string>
+</resources>
